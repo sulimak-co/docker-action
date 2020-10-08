@@ -4,13 +4,13 @@ Github action for build and push image
 ## Example
 ```yaml
     - name: Build image and Push to ghcr
-            uses: sulimak-co/docker-action@1.0.0
-            with:
-              repository: sulimak-co/docker-actions
-              username: ${{ github.repository_owner }}}
-              password: ${{ secrets.PERSONAL_ACCESS_TOKEN_ORG }}
-              registry: ghcr.io
-              tag: ${{ env.GITHUB_BRANCH_NAME }}
+      uses: sulimak-co/docker-action@1.0.0
+      with:
+        repository: sulimak-co/docker-actions
+        username: ${{ github.repository_owner }}}
+        password: ${{ secrets.PERSONAL_ACCESS_TOKEN_ORG }}
+        registry: ghcr.io
+        tag: latest
 ```
 
 ## Arguments
