@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM docker:latest
 
 LABEL "name"="Sulimak-co Docker Action"
 LABEL "maintainer"="Alexandr Kizilow <alexandr.kizilow@gmail.com>"
