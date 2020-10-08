@@ -29,6 +29,7 @@ if [ -z $TAG ]; then
 fi
 
 if [ -z $VERSION ]; then
+  $VERSION=0.0.0
   echo 'No version'
 fi
 
