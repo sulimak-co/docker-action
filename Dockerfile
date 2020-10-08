@@ -13,6 +13,5 @@ RUN apk update \
   && apk upgrade \
   && apk add --no-cache git bash
 
-ADD entrypoint.sh .
-RUN ls
-ENTRYPOINT ["sh", "./entrypoint.sh"]
+ADD entrypoint.sh /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
