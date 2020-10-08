@@ -1,4 +1,4 @@
-FROM docker:stable
+FROM alpine:latest
 
 LABEL "name"="Sulimak-co Docker Action"
 LABEL "maintainer"="Alexandr Kizilow <alexandr.kizilow@gmail.com>"
@@ -13,6 +13,6 @@ RUN apk update \
   && apk upgrade \
   && apk add --no-cache git bash
 
-COPY entrypoint.sh .
-
+ADD entrypoint.sh .
+RUN ls
 ENTRYPOINT ["sh", "./entrypoint.sh"]
