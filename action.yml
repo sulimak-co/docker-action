@@ -1,0 +1,38 @@
+name: 'Sulimak-co Docker Action'
+description: 'GitHub Actions for build and publish Docker Image'
+author: 'Alexandr Kizilow <alexandr.kizilow@gmail.com>'
+branding:
+  icon: 'package'
+  color: 'blue'
+inputs:
+  username:
+    description: 'Registry username'
+    required: true
+  password:
+    description: 'Registry password'
+    required: true
+  repository:
+    description: 'Repository on registry'
+    required: true
+  registry:
+    description: 'Registry hostname'
+    required: true
+  tag:
+    description: 'Image tag'
+    required: true
+  version:
+    description: 'Version of service'
+    required: false
+outputs:
+  image:
+    description: 'Tagged docker image'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.username }}
+    - ${{ inputs.password }}
+    - ${{ inputs.repository }}
+    - ${{ inputs.registry }}
+    - ${{ inputs.tag }}
+    - ${{ inputs.version }}
