@@ -13,6 +13,6 @@ RUN apk update \
   && apk upgrade \
   && apk add --no-cache git bash
 
-COPY entrypoint.sh /entrypoint.sh
+COPY entrypoint.sh .
 
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["sh", "./entrypoint.sh"]
