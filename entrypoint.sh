@@ -1,5 +1,4 @@
-#!/bin/bash
-
+#!/bin/sh
 set -e
 
 USERNAME=$1
@@ -24,12 +23,13 @@ if [ -z $REPOSITORY ]; then
   exit 1
 fi
 
-if [[ -z $TAG ]]; then
+if [ -z $TAG ]; then
   echo 'Required tag'
   exit 1
 fi
 
-if [[ -z $VERSION ]]; then
+if [ -z $VERSION ]; then
+  $VERSION=0.0.0
   echo 'No version'
 fi
 
